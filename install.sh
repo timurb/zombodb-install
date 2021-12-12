@@ -9,6 +9,7 @@ sudo apt-get install postgresql-14
 # Install ZomboDB
 # see https://github.com/zombodb/zombodb/blob/master/SOURCE-INSTALLATION.md#building-binary-artifacts-with-docker for building
 # see https://github.com/zombodb/zombodb/blob/master/BINARY-INSTALLATION.md for configuration
+wget https://github.com/timurb/zombodb-install/releases/download/pre-release/zombodb_ubuntu-bionic_pg14-3000.0.6_amd64.deb
 sudo dpkg -i zombodb_ubuntu-bionic_pg14-3000.0.6_amd64.deb
 
 # Install ElasticSearch
