@@ -14,5 +14,5 @@ sudo dpkg -i zombodb_ubuntu-bionic_pg14-3000.0.6_amd64.deb
 # Install ElasticSearch
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
-apt-get update && apt-get install elasticsearch
-systemctl start elasticsearch
+sudo apt-get update && sudo apt-get install elasticsearch
+sudo systemctl start elasticsearch
