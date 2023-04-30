@@ -1,5 +1,7 @@
 #!/bin/sh
 
+ENV VERSION=3000.0.6
+
 # Install PostgreSQL
 curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 echo 'deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main' | sudo tee /etc/apt/sources.list.d/postgres.list
@@ -9,8 +11,8 @@ sudo apt-get install postgresql-14
 # Install ZomboDB
 # see https://github.com/zombodb/zombodb/blob/master/SOURCE-INSTALLATION.md#building-binary-artifacts-with-docker for building
 # see https://github.com/zombodb/zombodb/blob/master/BINARY-INSTALLATION.md for configuration
-wget https://github.com/timurb/zombodb-install/releases/download/3000.0.6/zombodb_ubuntu-bionic_pg14-3000.0.6_amd64.deb
-sudo dpkg -i zombodb_ubuntu-bionic_pg14-3000.0.6_amd64.deb
+wget https://github.com/timurb/zombodb-install/releases/download/${VERSION}/zombodb_ubuntu-bionic_pg14-${VERSION}_amd64.deb
+sudo dpkg -i zombodb_ubuntu-bionic_pg14-${VERSION}_amd64.deb
 
 # Install ElasticSearch
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
