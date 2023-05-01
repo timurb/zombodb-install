@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ENV VERSION=3000.0.6
+VERSION=3000.1.13
 
 # Install PostgreSQL
 curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
